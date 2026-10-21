@@ -255,20 +255,11 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
             </Link>
           </nav>
 
-          {/* Right Actions: Cleanly responsive on mobile, desktop CTAs preserved */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto">
-            {/* Mobile quick-call phone icon button */}
+          {/* Right Actions: Only hamburger on mobile/tablet (< lg), desktop CTAs on lg+ */}
+          <div className="flex items-center gap-3 shrink-0 ml-auto">
+            {/* Desktop Call Us button */}
             <a
-              href="tel:+8801819199876"
-              className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-red-50 text-[#b8001a] border border-red-200 hover:bg-red-100 transition-colors shrink-0"
-              aria-label="Call KB Flooring BD"
-            >
-              <Phone className="w-4 h-4" />
-            </a>
-
-            {/* Desktop & Tablet Call Us button */}
-            <a
-              className={`hidden sm:flex items-center gap-2 rounded border border-gray-300 hover:bg-gray-50 text-gray-800 font-semibold transition-all shrink-0 ${
+              className={`hidden lg:flex items-center gap-2 rounded border border-gray-300 hover:bg-gray-50 text-gray-800 font-semibold transition-all shrink-0 ${
                 isScrolled
                   ? "px-[14px] py-[7px] text-[13px] sm:text-[14px]"
                   : "px-[17px] py-[10px] text-[15px] xl:text-[16px]"
@@ -279,7 +270,7 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
               <span>Call Us</span>
             </a>
 
-            {/* Desktop & Tablet Get a free Quote button (hidden on mobile phones to prevent overflow, drawer has full-width button) */}
+            {/* Desktop Get a free Quote button */}
             <button
               onClick={() => {
                 if (onOpenQuoteModal) onOpenQuoteModal();
@@ -288,19 +279,17 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
                   if (form) form.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className={`hidden sm:flex rounded bg-[#b8001a] hover:bg-[#e11d2a] text-white font-semibold uppercase tracking-wider shadow-sm transition-all items-center gap-2 shrink-0 ${
+              className={`hidden lg:flex rounded bg-[#b8001a] hover:bg-[#e11d2a] text-white font-semibold uppercase tracking-wider shadow-sm transition-all items-center gap-2 shrink-0 ${
                 isScrolled
                   ? "px-[16px] py-[7px] text-[13px] sm:text-[14px]"
                   : "px-[19px] py-[10px] text-[15px] xl:text-[16px]"
               }`}
             >
               <Mail className="w-4 h-4" />
-              <span>
-                <span className="hidden md:inline">Get a </span>Free Quote
-              </span>
+              <span>Get a free Quote</span>
             </button>
 
-            {/* Mobile menu toggle (cleanly positioned on the right edge, never overflows) */}
+            {/* Mobile menu toggle (Only element on the right in mobile view) */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 -mr-1 text-gray-800 hover:text-[#b8001a] hover:bg-gray-100 rounded-lg lg:hidden focus:outline-hidden transition-colors shrink-0"

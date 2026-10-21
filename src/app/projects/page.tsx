@@ -178,47 +178,47 @@ export default function ProjectsPage() {
         {/* Projects Grid */}
         <section className="py-16 lg:py-20 bg-gray-50/70 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
               {filteredProjects.map((proj, idx) => (
                 <div
                   key={idx}
                   onClick={() => setActiveProjectModal(proj)}
                   className="bg-white border border-gray-200 shadow-xs hover:shadow-lg transition-all flex flex-col group cursor-pointer overflow-hidden"
                 >
-                  <div className="relative h-56 w-full overflow-hidden bg-black/40">
+                  <div className="relative h-32 sm:h-56 w-full overflow-hidden bg-black/40">
                     <Image
                       src={proj.image}
                       alt={proj.title}
                       fill
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-3 left-3 bg-black/80 text-[10px] font-bold uppercase tracking-wider text-gray-200 px-2.5 py-1 border border-gray-700">
+                    <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-black/80 text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-gray-200 px-1.5 sm:px-2.5 py-0.5 sm:py-1 border border-gray-700">
                       COMPLETED
                     </div>
-                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1.5 text-white">
-                      <Maximize2 className="w-4 h-4" />
+                    <div className="absolute top-2 right-2 sm:top-3 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 p-1 sm:p-1.5 text-white">
+                      <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                   </div>
 
-                  <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div className="p-2.5 sm:p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className={`text-[10px] font-bold uppercase tracking-wider ${proj.categoryColor} mb-1`}>
+                      <div className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider ${proj.categoryColor} mb-0.5 sm:mb-1 truncate`}>
                         {proj.category}
                       </div>
-                      <h3 className="text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-2">
+                      <h3 className="text-xs sm:text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1 sm:mb-2 line-clamp-1">
                         {proj.title}
                       </h3>
-                      <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed mb-4">
+                      <p className="hidden sm:block text-xs text-gray-600 line-clamp-2 leading-relaxed mb-4">
                         {proj.challenge}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <MapPin className="w-3.5 h-3.5 text-[#d32323]" />
-                        <span>{proj.location}</span>
+                    <div className="pt-2 sm:pt-4 border-t border-gray-100 flex items-center justify-between text-[10px] sm:text-xs text-gray-500">
+                      <div className="flex items-center space-x-1 truncate mr-1">
+                        <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#d32323] shrink-0" />
+                        <span className="truncate">{proj.location}</span>
                       </div>
-                      <span className="font-bold text-gray-900">{proj.area}</span>
+                      <span className="font-bold text-gray-900 shrink-0">{proj.area}</span>
                     </div>
                   </div>
                 </div>

@@ -130,59 +130,59 @@ export default function BlogPage() {
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
               {filteredPosts.map((post, idx) => (
                 <article
                   key={idx}
                   className="bg-white border border-gray-200/90 shadow-xs hover:shadow-lg transition-all flex flex-col group overflow-hidden"
                 >
-                  <div className="relative h-52 w-full overflow-hidden bg-black/40">
+                  <div className="relative h-28 sm:h-52 w-full overflow-hidden bg-black/40">
                     <Image
                       src={post.heroImage}
                       alt={post.title}
                       fill
                       className="object-cover object-center group-hover:scale-104 transition-transform duration-500"
                     />
-                    <div className="absolute top-3 left-3 bg-[#0c1219]/90 text-[10px] font-bold uppercase tracking-wider text-white px-2.5 py-1 border border-gray-700">
+                    <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-[#0c1219]/90 text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-white px-1.5 sm:px-2.5 py-0.5 sm:py-1 border border-gray-700 truncate max-w-[85%]">
                       {post.category}
                     </div>
                   </div>
 
-                  <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div className="p-2.5 sm:p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center space-x-3 text-[11px] text-gray-400 mb-2.5">
+                      <div className="flex items-center space-x-1.5 sm:space-x-3 text-[9px] sm:text-[11px] text-gray-400 mb-1.5 sm:mb-2.5">
                         <span className="flex items-center space-x-1">
-                          <Calendar className="w-3 h-3" />
+                          <Calendar className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                           <span>{post.date}</span>
                         </span>
                         <span>•</span>
                         <span className="flex items-center space-x-1">
-                          <Clock className="w-3 h-3" />
+                          <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                           <span>{post.readTime}</span>
                         </span>
                       </div>
 
-                      <h2 className="text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-3 leading-snug line-clamp-2">
+                      <h2 className="text-xs sm:text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1.5 sm:mb-3 leading-snug line-clamp-2">
                         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                       </h2>
 
-                      <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed font-normal mb-6">
+                      <p className="hidden sm:block text-xs text-gray-600 line-clamp-3 leading-relaxed font-normal mb-6">
                         {post.excerpt || post.metaDescription}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
-                      <span className="text-[11px] text-gray-500 flex items-center space-x-1">
+                    <div className="pt-2 sm:pt-4 border-t border-gray-100 flex items-center justify-between text-[10px] sm:text-xs">
+                      <span className="hidden sm:flex text-[11px] text-gray-500 items-center space-x-1">
                         <User className="w-3 h-3" />
                         <span>{post.author}</span>
                       </span>
 
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-[#d32323] hover:underline"
+                        className="inline-flex items-center space-x-1 sm:space-x-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#d32323] hover:underline"
                       >
-                        <span>Read Full Guide</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
+                        <span>Read</span>
+                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       </Link>
                     </div>
                   </div>

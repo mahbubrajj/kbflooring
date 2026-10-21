@@ -65,25 +65,25 @@ export function WhyChooseUs() {
           </p>
         </div>
 
-        {/* 6 Grid items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 6 Grid items (2 columns on mobile) */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
           {points.map((pt, idx) => {
             const Icon = pt.icon;
             return (
               <div
                 key={idx}
-                className="bg-white p-7 border border-gray-200/90 shadow-xs hover:border-[#d32323]/50 hover:shadow-md transition-all flex flex-col justify-start"
+                className="bg-white p-3.5 sm:p-7 border border-gray-200/90 shadow-xs hover:border-[#d32323]/50 hover:shadow-md transition-all flex flex-col justify-start"
               >
-                <div className="w-10 h-10 bg-red-50 text-[#d32323] flex items-center justify-center mb-4 border border-red-100">
-                  <Icon className="w-5 h-5" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-50 text-[#d32323] flex items-center justify-center mb-2.5 sm:mb-4 border border-red-100 shrink-0">
+                  <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
 
-                <h3 className="text-sm font-black uppercase tracking-wide text-gray-950 mb-2.5">
+                <h3 className="text-xs sm:text-sm font-black uppercase tracking-wide text-gray-950 mb-1.5 sm:mb-2.5 leading-snug">
                   <span className="text-[#d32323] mr-1">{pt.num}</span>
                   {pt.title}
                 </h3>
 
-                <p className="text-xs text-gray-600 leading-relaxed font-normal">
+                <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed font-normal">
                   {pt.description}
                 </p>
               </div>

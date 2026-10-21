@@ -51,30 +51,30 @@ export function ProcessSection() {
           </p>
         </div>
 
-        {/* 4-Step Flow */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* 4-Step Flow (2 columns on mobile) */}
+        <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
           {steps.map((st, idx) => {
             const Icon = st.icon;
             return (
               <div
                 key={idx}
-                className="relative bg-gray-50/70 border border-gray-200/80 p-6 flex flex-col justify-start hover:border-gray-400 transition-colors"
+                className="relative bg-gray-50/70 border border-gray-200/80 p-3.5 sm:p-6 flex flex-col justify-start hover:border-gray-400 transition-colors"
               >
                 {/* Step Header with Big Number & Icon */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-3xl font-black text-[#d32323] tracking-tight">
+                <div className="flex items-center justify-between mb-2.5 sm:mb-4">
+                  <div className="text-2xl sm:text-3xl font-black text-[#d32323] tracking-tight">
                     {st.num}
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white text-gray-700 flex items-center justify-center border border-gray-200 shadow-xs">
-                    <Icon className="w-4 h-4 text-[#d32323]" />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-gray-700 flex items-center justify-center border border-gray-200 shadow-xs shrink-0">
+                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#d32323]" />
                   </div>
                 </div>
 
-                <h3 className="text-sm font-black uppercase tracking-wider text-gray-950 mb-2">
+                <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-950 mb-1.5 sm:mb-2 leading-snug">
                   {st.title}
                 </h3>
 
-                <p className="text-xs text-gray-600 leading-relaxed font-normal">
+                <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed font-normal">
                   {st.description}
                 </p>
               </div>

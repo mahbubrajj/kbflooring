@@ -201,10 +201,10 @@ export function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95 group"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95 group"
       >
         <svg
-          className="w-8 h-8 fill-white"
+          className="w-6 h-6 sm:w-8 sm:h-8 fill-white"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

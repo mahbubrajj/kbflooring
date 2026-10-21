@@ -54,14 +54,14 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
             : "max-h-9 opacity-100 py-0 text-xs"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-8">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse"></span>
-            <span className="text-xs font-medium tracking-wide text-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-8">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse shrink-0"></span>
+            <span className="text-[11px] sm:text-xs font-medium tracking-wide text-gray-200">
               Free site visit in Dhaka
             </span>
           </div>
-          <div className="flex items-center gap-4 sm:gap-6 text-xs">
+          <div className="flex items-center gap-3 sm:gap-6 text-[11px] sm:text-xs shrink-0">
             <a
               className="flex items-center gap-1.5 hover:text-white transition-colors"
               href="tel:+8801819199876"
@@ -81,21 +81,23 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
         </div>
       </div>
 
-      {/* Main Nav Bar (Logo sized prominently to match footer logo) */}
+      {/* Main Nav Bar (Fully responsive on mobile, large on desktop) */}
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
         <div
-          className={`max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between transition-all duration-300 ${
-            isScrolled ? "h-14" : "h-18"
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${
+            isScrolled ? "h-14" : "h-16 sm:h-18"
           }`}
         >
-          {/* Logo (Left Content with generous right gap) */}
-          <div className="flex items-center shrink-0 mr-6 lg:mr-10 xl:mr-14">
+          {/* Logo (Responsive scale: compact on mobile, large on desktop matching footer) */}
+          <div className="flex items-center shrink-0 mr-2 sm:mr-4 lg:mr-10 xl:mr-14">
             <Link className="flex items-center gap-3 group" href="/">
               <img
                 src="/Logo.png"
                 alt="KB Flooring BD Logo"
                 className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? "h-8 sm:h-8.5" : "h-11 sm:h-12"
+                  isScrolled
+                    ? "h-7 sm:h-8 lg:h-8.5"
+                    : "h-8 sm:h-9 md:h-10 lg:h-12"
                 }`}
               />
             </Link>
@@ -253,10 +255,20 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
             </Link>
           </nav>
 
-          {/* Desktop Right CTAs (Right Content with generous left gap) */}
-          <div className="flex items-center gap-3 shrink-0 ml-6 lg:ml-10 xl:ml-14">
+          {/* Right Actions: Cleanly responsive on mobile, desktop CTAs preserved */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto">
+            {/* Mobile quick-call phone icon button */}
             <a
-              className={`hidden sm:flex items-center gap-2 rounded border border-gray-300 hover:bg-gray-50 text-gray-800 font-semibold transition-all ${
+              href="tel:+8801819199876"
+              className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-red-50 text-[#b8001a] border border-red-200 hover:bg-red-100 transition-colors shrink-0"
+              aria-label="Call KB Flooring BD"
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+
+            {/* Desktop & Tablet Call Us button */}
+            <a
+              className={`hidden sm:flex items-center gap-2 rounded border border-gray-300 hover:bg-gray-50 text-gray-800 font-semibold transition-all shrink-0 ${
                 isScrolled
                   ? "px-[14px] py-[7px] text-[13px] sm:text-[14px]"
                   : "px-[17px] py-[10px] text-[15px] xl:text-[16px]"
@@ -267,6 +279,7 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
               <span>Call Us</span>
             </a>
 
+            {/* Desktop & Tablet Get a free Quote button (hidden on mobile phones to prevent overflow, drawer has full-width button) */}
             <button
               onClick={() => {
                 if (onOpenQuoteModal) onOpenQuoteModal();
@@ -275,20 +288,22 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
                   if (form) form.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className={`rounded bg-[#b8001a] hover:bg-[#e11d2a] text-white font-semibold uppercase tracking-wider shadow-sm transition-all flex items-center gap-2 ${
+              className={`hidden sm:flex rounded bg-[#b8001a] hover:bg-[#e11d2a] text-white font-semibold uppercase tracking-wider shadow-sm transition-all items-center gap-2 shrink-0 ${
                 isScrolled
                   ? "px-[16px] py-[7px] text-[13px] sm:text-[14px]"
                   : "px-[19px] py-[10px] text-[15px] xl:text-[16px]"
               }`}
             >
               <Mail className="w-4 h-4" />
-              <span>Get a free Quote</span>
+              <span>
+                <span className="hidden md:inline">Get a </span>Free Quote
+              </span>
             </button>
 
-            {/* Mobile menu toggle */}
+            {/* Mobile menu toggle (cleanly positioned on the right edge, never overflows) */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-700 hover:text-black lg:hidden focus:outline-hidden"
+              className="p-2 -mr-1 text-gray-800 hover:text-[#b8001a] hover:bg-gray-100 rounded-lg lg:hidden focus:outline-hidden transition-colors shrink-0"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

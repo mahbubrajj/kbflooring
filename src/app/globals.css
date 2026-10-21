@@ -125,11 +125,15 @@
   html, body {
     font-family: var(--font-poppins), sans-serif !important;
     font-size: 18px;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
   }
   body {
     @apply bg-background text-foreground;
     font-size: 18px;
     line-height: 1.6;
+    position: relative;
   }
   body p {
     font-size: 18px;

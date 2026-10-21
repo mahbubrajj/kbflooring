@@ -37,7 +37,7 @@ export function Footer() {
               {/* Social Media Links (Facebook, LinkedIn, YouTube) */}
               <div className="pt-2 flex items-center space-x-3">
                 <a
-                  href="https://facebook.com/kbflooringbd"
+                  href="https://www.facebook.com/KBflooringBD"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Follow KB Flooring BD on Facebook"
@@ -49,7 +49,7 @@ export function Footer() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/company/kbflooringbd"
+                  href="https://www.linkedin.com/company/kbflooringbd"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Connect with KB Flooring BD on LinkedIn"
@@ -61,7 +61,7 @@ export function Footer() {
                 </a>
 
                 <a
-                  href="https://youtube.com/@kbflooringbd"
+                  href="https://www.youtube.com/@KBflooringBD"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Subscribe to KB Flooring BD on YouTube"

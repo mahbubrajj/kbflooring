@@ -15,6 +15,11 @@ export function JsonLd() {
     telephone: "+8801819199876",
     email: "kbflooringbd@gmail.com",
     priceRange: "৳৳",
+    sameAs: [
+      "https://www.facebook.com/KBflooringBD",
+      "https://www.linkedin.com/company/kbflooringbd",
+      "https://www.youtube.com/@KBflooringBD",
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: "House 791/1, West Kazipara",

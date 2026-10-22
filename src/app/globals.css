@@ -125,7 +125,7 @@
   html, body {
     font-family: var(--font-poppins), sans-serif !important;
     font-size: 18px;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100%;
     width: 100%;
   }
@@ -137,6 +137,11 @@
   }
   body p {
     font-size: 18px;
+  }
+  header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
   }
 }
 

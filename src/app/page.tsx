@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { HomeIntroSection } from "@/components/sections/HomeIntroSection";
 import { TrustBadges } from "@/components/sections/TrustBadges";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
@@ -11,6 +12,7 @@ import { CoverageSection } from "@/components/sections/CoverageSection";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { BuildBetterFloorsSection } from "@/components/sections/BuildBetterFloorsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { GuidesSection } from "@/components/sections/GuidesSection";
@@ -43,8 +45,11 @@ export default function Home() {
       <Header onOpenQuoteModal={() => handleOpenQuoteModal()} />
 
       <main className="flex-1">
-        {/* Hero Section */}
+        {/* Hero Section (Slider) */}
         <HeroSection onOpenQuoteModal={() => handleOpenQuoteModal()} />
+
+        {/* Brand Overview & Capabilities with H1 Tag (After Slider) */}
+        <HomeIntroSection onOpenQuoteModal={() => handleOpenQuoteModal()} />
 
         {/* 4 Trust Badges Bar */}
         <TrustBadges />
@@ -66,6 +71,9 @@ export default function Home() {
 
         {/* Case Studies: Projects We Have Completed */}
         <ProjectsSection />
+
+        {/* Why Choose Us & Partnership Callout (After Case Studies & Before How We Work) */}
+        <BuildBetterFloorsSection onOpenQuoteModal={() => handleOpenQuoteModal()} />
 
         {/* Clear Engineering Process: How We Work */}
         <ProcessSection />

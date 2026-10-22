@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -57,7 +57,7 @@ export default function ServicesPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-3">
                 Complete Engineering Portfolio
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 Our Services & Certified Systems
               </h1>
               <p className="text-base text-gray-300 font-normal leading-relaxed">
@@ -84,7 +84,7 @@ export default function ServicesPage() {
                     <span className="text-[11px] font-bold uppercase tracking-widest text-[#d32323] block mb-1">
                       {category.categoryTag}
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-black uppercase text-gray-950 tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-950 tracking-tight">
                       {category.title}
                     </h2>
                     <p className="text-xs sm:text-sm text-gray-600 mt-1 max-w-2xl font-normal">
@@ -113,7 +113,7 @@ export default function ServicesPage() {
                           Build: <span className="text-gray-900">{sub.thickness}</span>
                         </div>
 
-                        <h3 className="text-sm font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-2">
+                        <h3 className="text-sm font-extrabold uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-2">
                           {sub.title}
                         </h3>
 

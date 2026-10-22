@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -120,7 +120,7 @@ export default async function SubServicePage({ params }: PageProps) {
                 <span>Certified Applicator</span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 {subService.title}
               </h1>
 
@@ -159,7 +159,7 @@ export default async function SubServicePage({ params }: PageProps) {
               <div className="lg:col-span-8 space-y-12">
                 {/* Engineering Overview */}
                 <div>
-                  <h2 className="text-2xl font-black uppercase text-gray-950 tracking-tight mb-4 flex items-center space-x-2">
+                  <h2 className="text-2xl font-extrabold uppercase text-gray-950 tracking-tight mb-4 flex items-center space-x-2">
                     <span className="w-2 h-5 bg-[#d32323] inline-block"></span>
                     <span>System Engineering Overview</span>
                   </h2>
@@ -170,7 +170,7 @@ export default async function SubServicePage({ params }: PageProps) {
 
                 {/* Key Benefits Checklist */}
                 <div>
-                  <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight mb-4">
+                  <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight mb-4">
                     Key Performance Advantages
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -190,7 +190,7 @@ export default async function SubServicePage({ params }: PageProps) {
 
                 {/* Technical Specifications Table */}
                 <div>
-                  <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight mb-4">
+                  <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight mb-4">
                     Technical Specifications Matrix
                   </h3>
                   <div className="border border-gray-200 overflow-hidden">
@@ -215,7 +215,7 @@ export default async function SubServicePage({ params }: PageProps) {
 
                 {/* Installation Process */}
                 <div>
-                  <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight mb-4">
+                  <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight mb-4">
                     5-Stage Installation Methodology
                   </h3>
                   <div className="space-y-3">
@@ -228,7 +228,7 @@ export default async function SubServicePage({ params }: PageProps) {
                           {step.step}
                         </div>
                         <div>
-                          <h4 className="text-xs font-black uppercase tracking-wide text-gray-950 mb-1">
+                          <h4 className="text-xs font-extrabold uppercase tracking-wide text-gray-950 mb-1">
                             {step.title}
                           </h4>
                           <p className="text-xs text-gray-600 leading-relaxed font-normal">
@@ -242,7 +242,7 @@ export default async function SubServicePage({ params }: PageProps) {
 
                 {/* Target Applications */}
                 <div>
-                  <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight mb-4">
+                  <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight mb-4">
                     Target Facilities & Industries
                   </h3>
                   <div className="flex flex-wrap gap-2">
@@ -265,7 +265,7 @@ export default async function SubServicePage({ params }: PageProps) {
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#d32323] block mb-2">
                     Free Consultation In Dhaka
                   </span>
-                  <h4 className="text-base font-black uppercase mb-3">
+                  <h4 className="text-base font-extrabold uppercase mb-3">
                     Require This System For Your Facility?
                   </h4>
                   <p className="text-xs text-gray-300 leading-relaxed mb-6 font-normal">
@@ -288,7 +288,7 @@ export default async function SubServicePage({ params }: PageProps) {
 
                 {/* Sibling Services in This Category */}
                 <div className="border border-gray-200 p-6 bg-gray-50/70">
-                  <h4 className="text-xs font-black uppercase tracking-wider text-gray-950 mb-4 pb-2 border-b border-gray-200">
+                  <h4 className="text-xs font-extrabold uppercase tracking-wider text-gray-950 mb-4 pb-2 border-b border-gray-200">
                     More in {category.title}
                   </h4>
                   <ul className="space-y-2">

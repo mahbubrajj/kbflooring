@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -174,7 +174,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-3">
                 Dhaka Headquarters · Mirpur 10
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 About KB Flooring BD
               </h1>
               <p className="text-base sm:text-lg text-gray-300 font-normal leading-relaxed">
@@ -196,7 +196,7 @@ export default function AboutPage() {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-2">
                     Who We Are · Substrate Specialists
                   </span>
-                  <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight">
+                  <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight">
                     Engineering Durable Floors Across Bangladesh Since 2014
                   </h2>
                 </div>
@@ -289,7 +289,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-2">
                 Core Principles
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black uppercase text-gray-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-950 tracking-tight">
                 Why Factory Managers Choose KB Flooring BD
               </h2>
             </div>
@@ -305,7 +305,7 @@ export default function AboutPage() {
                     <div className="w-10 h-10 bg-red-50 text-[#b8001a] flex items-center justify-center mb-4 border border-red-100">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-sm font-black uppercase text-gray-950 mb-2">
+                    <h3 className="text-sm font-extrabold uppercase text-gray-950 mb-2">
                       {v.title}
                     </h3>
                     <p className="text-xs text-gray-600 leading-relaxed font-normal">
@@ -329,7 +329,7 @@ export default function AboutPage() {
                 <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-2">
                   Commercial & Industrial Partnerships
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight">
+                <h2 className="text-2xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight">
                   Our Corporate & Industrial Clients
                 </h2>
                 <p className="text-sm text-gray-600 mt-2 max-w-2xl font-normal leading-relaxed">
@@ -408,7 +408,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-2">
                 Mechanical Capability
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black uppercase text-gray-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-950 tracking-tight">
                 Our On-Site Application Fleet
               </h2>
               <p className="text-xs sm:text-sm text-gray-500 mt-1">
@@ -422,7 +422,7 @@ export default function AboutPage() {
                   <div className="text-[10px] font-bold uppercase text-[#b8001a] mb-1">
                     Fleet Item 0{i + 1}
                   </div>
-                  <h3 className="text-xs font-black uppercase text-gray-950 mb-2">
+                  <h3 className="text-xs font-extrabold uppercase text-gray-950 mb-2">
                     {eq.name}
                   </h3>
                   <p className="text-xs text-gray-600 font-normal leading-relaxed">

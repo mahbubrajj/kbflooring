@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import {
@@ -53,7 +53,7 @@ export function BuildBetterFloorsSection({ onOpenQuoteModal }: BuildBetterFloors
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Why Choose KB Flooring
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black uppercase tracking-tight text-gray-950 mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold uppercase tracking-tight text-gray-950 mb-3">
             Why Choose Us?
           </h2>
           <p className="text-sm sm:text-base text-gray-600 font-medium">
@@ -97,7 +97,7 @@ export function BuildBetterFloorsSection({ onOpenQuoteModal }: BuildBetterFloors
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Partner With The Experts</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-tight text-white">
                 Let’s Build Better Floors Together
               </h3>
               <p className="text-sm sm:text-base text-red-100 max-w-2xl leading-relaxed">

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -151,7 +151,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
             <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
               Certified Systems
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight">
               What We Do
             </h2>
             <p className="text-sm text-gray-500 mt-1 font-medium">
@@ -196,7 +196,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-base font-black uppercase tracking-wide text-gray-950 mb-2">
+                  <h3 className="text-base font-extrabold uppercase tracking-wide text-gray-950 mb-2">
                     {srv.title}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -249,7 +249,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
               {selectedService.badge}
             </div>
 
-            <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight mb-2">
+            <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight mb-2">
               {selectedService.title}
             </h3>
             <p className="text-xs text-gray-600 mb-6 leading-relaxed">

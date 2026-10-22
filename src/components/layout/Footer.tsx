@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -82,7 +82,7 @@ export function Footer() {
 
             {/* Column 2: Industrial Services (3 cols) */}
             <div className="lg:col-span-3 space-y-3">
-              <h4 className="text-xs font-black uppercase tracking-wider text-white">
+              <h4 className="text-xs font-extrabold uppercase tracking-wider text-white">
                 Industrial Services
               </h4>
               <ul className="space-y-2 text-xs">
@@ -108,7 +108,7 @@ export function Footer() {
 
             {/* Column 3: Corporate Profile (2 cols) */}
             <div className="lg:col-span-2 space-y-3">
-              <h4 className="text-xs font-black uppercase tracking-wider text-white">
+              <h4 className="text-xs font-extrabold uppercase tracking-wider text-white">
                 Corporate Profile
               </h4>
               <ul className="space-y-2 text-xs">
@@ -134,7 +134,7 @@ export function Footer() {
 
             {/* Column 4: Contact & Operations (3 cols) */}
             <div className="lg:col-span-3 space-y-3.5">
-              <h4 className="text-xs font-black uppercase tracking-wider text-white">
+              <h4 className="text-xs font-extrabold uppercase tracking-wider text-white">
                 Contact & Operations
               </h4>
 

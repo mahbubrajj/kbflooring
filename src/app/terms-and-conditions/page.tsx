@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -47,7 +47,7 @@ export default function TermsPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-2">
               Legal & Commercial Framework
             </span>
-            <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-2">
+            <h1 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white mb-2">
               Terms & Conditions
             </h1>
             <p className="text-xs text-gray-300">
@@ -60,7 +60,7 @@ export default function TermsPage() {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-8 space-y-10 text-xs sm:text-sm text-gray-700 leading-relaxed">
             <div>
-              <h2 className="text-base font-black uppercase text-gray-950 mb-3 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold uppercase text-gray-950 mb-3 flex items-center space-x-2">
                 <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                 <span>1. Scope of Work & Binding Written Proposals</span>
               </h2>
@@ -74,7 +74,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-base font-black uppercase text-gray-950 mb-3 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold uppercase text-gray-950 mb-3 flex items-center space-x-2">
                 <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                 <span>2. Concrete Substrate Conditions & Pre-Requisites</span>
               </h2>
@@ -101,7 +101,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-base font-black uppercase text-gray-950 mb-3 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold uppercase text-gray-950 mb-3 flex items-center space-x-2">
                 <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                 <span>3. Client Site Provisions (Power & Access)</span>
               </h2>
@@ -114,7 +114,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-base font-black uppercase text-gray-950 mb-3 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold uppercase text-gray-950 mb-3 flex items-center space-x-2">
                 <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                 <span>4. Curing Periods & Facility Re-Entry</span>
               </h2>
@@ -133,7 +133,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-base font-black uppercase text-gray-950 mb-3 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold uppercase text-gray-950 mb-3 flex items-center space-x-2">
                 <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                 <span>5. Written Workmanship Warranty</span>
               </h2>
@@ -151,7 +151,7 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-base font-black uppercase text-gray-950 mb-3 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold uppercase text-gray-950 mb-3 flex items-center space-x-2">
                 <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                 <span>6. Jurisdiction & Legal Authority</span>
               </h2>

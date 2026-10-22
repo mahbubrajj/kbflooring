@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { ChevronDown, Plus, Minus } from "lucide-react";
@@ -46,7 +46,7 @@ export function FaqSection() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Questions & Answers
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight mb-2">
             Frequently Asked Questions
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 font-medium">
@@ -70,7 +70,7 @@ export function FaqSection() {
                   onClick={() => toggleFaq(idx)}
                   className="w-full flex items-center justify-between text-left px-6 py-4.5 group"
                 >
-                  <span className="text-xs sm:text-sm font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors pr-4">
+                  <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors pr-4">
                     {faq.question}
                   </span>
                   <div className="w-5 h-5 flex items-center justify-center text-gray-500 group-hover:text-black shrink-0 transition-transform duration-200">

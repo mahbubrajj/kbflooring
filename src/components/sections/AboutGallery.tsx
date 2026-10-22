@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -107,7 +107,7 @@ export function AboutGallery() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-2">
               Verified Project Archive
             </span>
-            <h2 className="text-2xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight">
               On-Site Application Gallery
             </h2>
             <p className="text-sm text-gray-600 mt-2 max-w-2xl font-normal leading-relaxed">
@@ -215,7 +215,7 @@ export function AboutGallery() {
                   </span>
                   <span className="text-gray-500">{selectedImage.location} · {selectedImage.area}</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-black uppercase text-gray-950">
+                <h3 className="text-lg sm:text-xl font-extrabold uppercase text-gray-950">
                   {selectedImage.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">

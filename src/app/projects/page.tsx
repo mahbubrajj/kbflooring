@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -141,7 +141,7 @@ export default function ProjectsPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-3">
                 Over 250+ Completed Installations
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 Case Studies & Project Gallery
               </h1>
               <p className="text-base text-gray-300 font-normal leading-relaxed">
@@ -205,7 +205,7 @@ export default function ProjectsPage() {
                       <div className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider ${proj.categoryColor} mb-0.5 sm:mb-1 truncate`}>
                         {proj.category}
                       </div>
-                      <h3 className="text-xs sm:text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1 sm:mb-2 line-clamp-1">
+                      <h3 className="text-xs sm:text-base font-extrabold uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1 sm:mb-2 line-clamp-1">
                         {proj.title}
                       </h3>
                       <p className="hidden sm:block text-xs text-gray-600 line-clamp-2 leading-relaxed mb-4">
@@ -256,7 +256,7 @@ export default function ProjectsPage() {
                   <span className="font-bold text-gray-950">{activeProjectModal.area}</span>
                 </div>
 
-                <h3 className="text-2xl font-black uppercase text-gray-950 tracking-tight">
+                <h3 className="text-2xl font-extrabold uppercase text-gray-950 tracking-tight">
                   {activeProjectModal.title}
                 </h3>
 

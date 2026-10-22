@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { FileText, Phone } from "lucide-react";
@@ -104,7 +104,7 @@ export function HeroSection({ onOpenQuoteModal }: HeroSectionProps) {
             <div className="min-h-[170px]" id="slide-text-container">
               <h2
                 id="slide-title"
-                className="text-3xl sm:text-4xl lg:text-[3.25rem] font-black tracking-tight text-white leading-tight uppercase max-w-2xl transition-all duration-300"
+                className="text-3xl sm:text-4xl lg:text-[3.25rem] font-extrabold tracking-tight text-white leading-tight uppercase max-w-2xl transition-all duration-300"
               >
                 {active.title}
               </h2>

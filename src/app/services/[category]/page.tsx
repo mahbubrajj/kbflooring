@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -85,7 +85,7 @@ export default async function CategoryPage({ params }: PageProps) {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-3">
                 {category.badge} · Certified Systems
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 {category.title} Solutions
               </h1>
               <p className="text-sm sm:text-base text-gray-300 font-normal leading-relaxed mb-6">
@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: PageProps) {
               <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-1">
                 Specialized Sub-Systems
               </span>
-              <h2 className="text-2xl sm:text-3xl font-black uppercase text-gray-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-950 tracking-tight">
                 Choose a Specific {category.title} System
               </h2>
               <p className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">
@@ -121,7 +121,7 @@ export default async function CategoryPage({ params }: PageProps) {
                       {sub.thickness} Profile
                     </div>
 
-                    <h3 className="text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-2">
+                    <h3 className="text-base font-extrabold uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-2">
                       {sub.title}
                     </h3>
 

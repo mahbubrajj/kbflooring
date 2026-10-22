@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -78,7 +78,7 @@ export default function ContactPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-3">
                 Direct Engineering Consultation
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 Contact KB Flooring BD
               </h1>
               <p className="text-base text-gray-300 font-normal leading-relaxed">
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
                     Headquarters
                   </span>
-                  <h2 className="text-2xl font-black uppercase text-gray-950 tracking-tight mb-4">
+                  <h2 className="text-2xl font-extrabold uppercase text-gray-950 tracking-tight mb-4">
                     Mirpur Operations Hub
                   </h2>
                   <p className="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
@@ -213,7 +213,7 @@ export default function ContactPage() {
                       <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto border border-emerald-200">
                         <CheckCircle2 className="w-10 h-10" />
                       </div>
-                      <h3 className="text-2xl font-black uppercase text-gray-950">
+                      <h3 className="text-2xl font-extrabold uppercase text-gray-950">
                         Inquiry Successfully Logged
                       </h3>
                       <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
@@ -246,7 +246,7 @@ export default function ContactPage() {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-[#d32323] block mb-1">
                           Direct Engineering Response
                         </span>
-                        <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight">
+                        <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight">
                           Request Technical Consultation & Quote
                         </h3>
                         <p className="text-xs text-gray-500 font-medium mt-1">

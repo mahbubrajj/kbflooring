@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -59,7 +59,7 @@ export function ProjectsSection() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
               Case Studies
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black uppercase text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-tight">
               Projects We Have Completed
             </h2>
           </div>
@@ -110,7 +110,7 @@ export function ProjectsSection() {
                   <div className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider ${proj.categoryColor} mb-0.5 sm:mb-1 truncate`}>
                     {proj.category}
                   </div>
-                  <h3 className="text-[11px] sm:text-xs font-black uppercase tracking-wide text-white group-hover:text-red-400 transition-colors line-clamp-1">
+                  <h3 className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-white group-hover:text-red-400 transition-colors line-clamp-1">
                     {proj.title}
                   </h3>
                 </div>
@@ -154,7 +154,7 @@ export function ProjectsSection() {
                 <span className="text-gray-200">{activeProject.area}</span>
               </div>
 
-              <h3 className="text-xl font-black uppercase text-white mb-3">
+              <h3 className="text-xl font-extrabold uppercase text-white mb-3">
                 {activeProject.title}
               </h3>
 

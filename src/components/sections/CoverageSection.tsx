@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { Building2, MapPin, ArrowRight } from "lucide-react";
@@ -50,7 +50,7 @@ export function CoverageSection({ onInquireTravel }: CoverageSectionProps) {
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             National Deployment
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight mb-2">
             Industries and Areas We Serve
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 font-medium">
@@ -62,7 +62,7 @@ export function CoverageSection({ onInquireTravel }: CoverageSectionProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Left: Specialized Sectors */}
           <div className="bg-gray-50/70 border border-gray-200/80 p-6 sm:p-8">
-            <div className="flex items-center space-x-2 text-xs font-black uppercase tracking-wider text-gray-950 mb-6">
+            <div className="flex items-center space-x-2 text-xs font-extrabold uppercase tracking-wider text-gray-950 mb-6">
               <span className="w-2 h-4 bg-[#d32323] inline-block"></span>
               <Building2 className="w-4 h-4 text-[#d32323]" />
               <span>Specialized Sectors</span>
@@ -82,7 +82,7 @@ export function CoverageSection({ onInquireTravel }: CoverageSectionProps) {
 
           {/* Right: Regional Coverage Hubs */}
           <div className="bg-gray-50/70 border border-gray-200/80 p-6 sm:p-8">
-            <div className="flex items-center space-x-2 text-xs font-black uppercase tracking-wider text-gray-950 mb-6">
+            <div className="flex items-center space-x-2 text-xs font-extrabold uppercase tracking-wider text-gray-950 mb-6">
               <span className="w-2 h-4 bg-[#d32323] inline-block"></span>
               <MapPin className="w-4 h-4 text-[#d32323]" />
               <span>Regional Coverage Hubs</span>

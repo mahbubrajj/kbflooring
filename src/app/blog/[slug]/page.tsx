@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.category}
             </div>
 
-            <h1 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight leading-tight mb-6">
+            <h1 className="text-2xl sm:text-4xl font-extrabold uppercase text-white tracking-tight leading-tight mb-6">
               {post.title}
             </h1>
 
@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* AEO Quick Answer Box (Direct Snippet for AI Overviews) */}
             <div className="mb-10 bg-red-50/60 border-l-4 border-[#d32323] p-6 shadow-xs">
-              <div className="flex items-center space-x-2 text-xs font-black uppercase tracking-wider text-gray-950 mb-2">
+              <div className="flex items-center space-x-2 text-xs font-extrabold uppercase tracking-wider text-gray-950 mb-2">
                 <Sparkles className="w-4 h-4 text-[#d32323]" />
                 <span>Quick Engineering Answer (AEO Summary)</span>
               </div>
@@ -219,7 +219,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Key Takeaways */}
             <div className="mb-12 bg-gray-50 border border-gray-200 p-6">
-              <h3 className="text-xs font-black uppercase tracking-wider text-gray-950 mb-3">
+              <h3 className="text-xs font-extrabold uppercase tracking-wider text-gray-950 mb-3">
                 Key Engineering Takeaways
               </h3>
               <ul className="space-y-2">
@@ -236,7 +236,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div className="space-y-10">
               {post.sections.map((sec, secIdx) => (
                 <section key={secIdx} className="space-y-4">
-                  <h2 className="text-xl sm:text-2xl font-black uppercase text-gray-950 tracking-tight flex items-center space-x-2">
+                  <h2 className="text-xl sm:text-2xl font-extrabold uppercase text-gray-950 tracking-tight flex items-center space-x-2">
                     <span className="w-1.5 h-4 bg-[#d32323] inline-block"></span>
                     <span>{sec.heading}</span>
                   </h2>
@@ -292,14 +292,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* FAQ Accordion Section for this Guide */}
             {post.faqs.length > 0 && (
               <div className="mt-14 pt-10 border-t border-gray-200">
-                <h3 className="text-xl font-black uppercase text-gray-950 tracking-tight mb-6 flex items-center space-x-2">
+                <h3 className="text-xl font-extrabold uppercase text-gray-950 tracking-tight mb-6 flex items-center space-x-2">
                   <HelpCircle className="w-5 h-5 text-[#d32323]" />
                   <span>Frequently Asked Questions</span>
                 </h3>
                 <div className="space-y-3">
                   {post.faqs.map((faq, fIdx) => (
                     <div key={fIdx} className="border border-gray-200 bg-gray-50/60 p-5">
-                      <h4 className="text-xs sm:text-sm font-black uppercase text-gray-950 mb-2">
+                      <h4 className="text-xs sm:text-sm font-extrabold uppercase text-gray-950 mb-2">
                         {faq.question}
                       </h4>
                       <p className="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
@@ -314,7 +314,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Author Credential Signature Card */}
             <div className="mt-12 p-6 bg-gray-50 border border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <div className="text-xs font-black uppercase text-gray-950">
+                <div className="text-xs font-extrabold uppercase text-gray-950">
                   Written by {post.author}
                 </div>
                 <div className="text-[11px] text-gray-500 mt-0.5">
@@ -333,7 +333,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Related Technical Articles */}
             <div className="mt-16 pt-10 border-t border-gray-200">
-              <h3 className="text-lg font-black uppercase text-gray-950 tracking-tight mb-6">
+              <h3 className="text-lg font-extrabold uppercase text-gray-950 tracking-tight mb-6">
                 Related Industrial Guides
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -346,7 +346,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     <div className="text-[10px] font-bold uppercase text-[#d32323] mb-1">
                       {other.category}
                     </div>
-                    <h4 className="text-xs sm:text-sm font-black uppercase text-gray-950 group-hover:text-[#d32323] transition-colors line-clamp-2">
+                    <h4 className="text-xs sm:text-sm font-extrabold uppercase text-gray-950 group-hover:text-[#d32323] transition-colors line-clamp-2">
                       {other.title}
                     </h4>
                   </Link>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -157,7 +157,7 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
                     <span className="text-[10px] font-bold uppercase tracking-widest text-[#b8001a]">
                       Industrial & Commercial Solutions
                     </span>
-                    <h4 className="text-sm font-black uppercase text-gray-950">
+                    <h4 className="text-sm font-extrabold uppercase text-gray-950">
                       Explore Certified Flooring Systems
                     </h4>
                   </div>
@@ -178,7 +178,7 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
                         href={`/services/${category.slug}`}
                         className="group/cat block border-b border-gray-200 pb-1.5"
                       >
-                        <div className="text-xs font-black uppercase tracking-wide text-gray-950 group-hover/cat:text-[#b8001a] flex items-center justify-between">
+                        <div className="text-xs font-extrabold uppercase tracking-wide text-gray-950 group-hover/cat:text-[#b8001a] flex items-center justify-between">
                           <span>{category.title}</span>
                           <ChevronRight className="w-3 h-3 text-gray-400 group-hover/cat:translate-x-0.5 transition-transform" />
                         </div>

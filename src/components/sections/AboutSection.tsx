@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -23,7 +23,7 @@ export function AboutSection({ onOpenGallery }: AboutSectionProps) {
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Dhaka Engineered Substrates
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black uppercase text-gray-950 tracking-tight max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold uppercase text-gray-950 tracking-tight max-w-2xl">
             Your Flooring and Waterproofing Partner in Dhaka
           </h2>
         </div>

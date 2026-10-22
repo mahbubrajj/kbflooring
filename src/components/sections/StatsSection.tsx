@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 
@@ -32,7 +32,7 @@ export function StatsSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 text-center">
           {stats.map((s, idx) => (
             <div key={idx} className="flex flex-col items-center justify-center p-2">
-              <div className={`text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight ${s.color} mb-2`}>
+              <div className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight ${s.color} mb-2`}>
                 {s.value}
               </div>
               <div className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-gray-600">

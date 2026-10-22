@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export function GuidesSection() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
               Industry Knowledge & Guides
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight">
               Flooring Guides and Tips
             </h2>
             <p className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">
@@ -71,7 +71,7 @@ export function GuidesSection() {
                     </span>
                   </div>
 
-                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1.5 sm:mb-2.5 leading-snug line-clamp-2">
+                  <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1.5 sm:mb-2.5 leading-snug line-clamp-2">
                     <Link href={`/blog/${art.slug}`}>{art.title}</Link>
                   </h3>
 

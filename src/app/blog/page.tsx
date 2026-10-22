@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -70,7 +70,7 @@ export default function BlogPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8001a] block mb-3">
                 Field Knowledge & Industrial Engineering Insights
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+              <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">
                 12 Technical Flooring & Waterproofing Guides
               </h1>
               <p className="text-base text-gray-300 font-normal leading-relaxed">
@@ -162,7 +162,7 @@ export default function BlogPage() {
                         </span>
                       </div>
 
-                      <h2 className="text-xs sm:text-base font-black uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1.5 sm:mb-3 leading-snug line-clamp-2">
+                      <h2 className="text-xs sm:text-base font-extrabold uppercase tracking-wide text-gray-950 group-hover:text-[#d32323] transition-colors mb-1.5 sm:mb-3 leading-snug line-clamp-2">
                         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                       </h2>
 

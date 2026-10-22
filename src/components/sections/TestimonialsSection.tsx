@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { Star } from "lucide-react";
@@ -36,7 +36,7 @@ export function TestimonialsSection() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Commercial Endorsements
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight mb-2">
             What Our Clients Say
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 font-medium">
@@ -67,7 +67,7 @@ export function TestimonialsSection() {
 
               {/* Author Info */}
               <div className="pt-4 border-t border-gray-100">
-                <div className="text-xs font-black uppercase text-gray-950 tracking-wide">
+                <div className="text-xs font-extrabold uppercase text-gray-950 tracking-wide">
                   {t.name}
                 </div>
                 <div className="text-[11px] text-gray-500 mt-0.5">{t.role}</div>

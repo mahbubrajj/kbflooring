@@ -136,6 +136,9 @@
   body p {
     font-size: 18px;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+  }
   header {
     position: sticky !important;
     top: 0 !important;

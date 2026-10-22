@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { Lightbulb, Wrench, FileCheck, Users, Calculator, ShieldCheck } from "lucide-react";
@@ -57,7 +57,7 @@ export function WhyChooseUs() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Quality Assurance
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight mb-2">
             Why Choose KB Flooring BD
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 font-medium">
@@ -78,7 +78,7 @@ export function WhyChooseUs() {
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
 
-                <h3 className="text-xs sm:text-sm font-black uppercase tracking-wide text-gray-950 mb-1.5 sm:mb-2.5 leading-snug">
+                <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-gray-950 mb-1.5 sm:mb-2.5 leading-snug">
                   <span className="text-[#d32323] mr-1">{pt.num}</span>
                   {pt.title}
                 </h3>

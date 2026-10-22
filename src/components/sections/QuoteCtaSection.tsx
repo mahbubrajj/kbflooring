@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Send } from "lucide-react";
@@ -46,7 +46,7 @@ export function QuoteCtaSection({ selectedServicePreload }: QuoteCtaSectionProps
               Free Consultation Available
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white tracking-tight leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase text-white tracking-tight leading-[1.1]">
               Ready To Upgrade Your Floor?
             </h2>
 
@@ -88,7 +88,7 @@ export function QuoteCtaSection({ selectedServicePreload }: QuoteCtaSectionProps
                   <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto border border-emerald-200">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-black uppercase text-gray-950">
+                  <h3 className="text-xl font-extrabold uppercase text-gray-950">
                     Specification Received
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
@@ -116,7 +116,7 @@ export function QuoteCtaSection({ selectedServicePreload }: QuoteCtaSectionProps
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <h3 className="text-base font-black uppercase tracking-wide text-gray-950 mb-1">
+                    <h3 className="text-base font-extrabold uppercase tracking-wide text-gray-950 mb-1">
                       Request Technical Proposal
                     </h3>
                     <p className="text-[11px] text-gray-500 font-medium">

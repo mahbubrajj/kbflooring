@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { Compass, FileSpreadsheet, Wrench, CheckCircle2 } from "lucide-react";
@@ -43,7 +43,7 @@ export function ProcessSection() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Clear Engineering Process
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-gray-950 tracking-tight mb-2">
+          <h2 className="text-3xl sm:text-4xl font-extrabold uppercase text-gray-950 tracking-tight mb-2">
             How We Work
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 font-medium">
@@ -62,7 +62,7 @@ export function ProcessSection() {
               >
                 {/* Step Header with Big Number & Icon */}
                 <div className="flex items-center justify-between mb-2.5 sm:mb-4">
-                  <div className="text-2xl sm:text-3xl font-black text-[#d32323] tracking-tight">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#d32323] tracking-tight">
                     {st.num}
                   </div>
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-gray-700 flex items-center justify-center border border-gray-200 shadow-xs shrink-0">
@@ -70,7 +70,7 @@ export function ProcessSection() {
                   </div>
                 </div>
 
-                <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-950 mb-1.5 sm:mb-2 leading-snug">
+                <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-gray-950 mb-1.5 sm:mb-2 leading-snug">
                   {st.title}
                 </h3>
 

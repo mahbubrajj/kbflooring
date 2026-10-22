@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { X, CheckCircle2, ArrowRight } from "lucide-react";
@@ -55,7 +55,7 @@ export function QuoteModal({ isOpen, onClose, preselectedService }: QuoteModalPr
             <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto border border-emerald-200">
               <CheckCircle2 className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-black uppercase text-gray-950">
+            <h3 className="text-xl font-extrabold uppercase text-gray-950">
               Inquiry Received!
             </h3>
             <p className="text-xs text-gray-600 leading-relaxed max-w-sm mx-auto">
@@ -76,7 +76,7 @@ export function QuoteModal({ isOpen, onClose, preselectedService }: QuoteModalPr
               <div className="inline-block bg-[#d32323] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 mb-2">
                 Free Site Visit & Laser Measurement
               </div>
-              <h3 className="text-lg font-black uppercase text-gray-950 tracking-tight">
+              <h3 className="text-lg font-extrabold uppercase text-gray-950 tracking-tight">
                 Request A Fast Quote
               </h3>
               <p className="text-xs text-gray-500 font-medium">

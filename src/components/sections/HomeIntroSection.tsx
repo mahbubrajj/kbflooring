@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -21,7 +21,7 @@ export function HomeIntroSection({ onOpenQuoteModal }: HomeIntroSectionProps = {
             </div>
 
             {/* H1 Tag: KB FLOORING */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-gray-950 mb-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-gray-950 mb-3">
               KB FLOORING
             </h1>
 

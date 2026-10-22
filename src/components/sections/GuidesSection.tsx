@@ -11,7 +11,7 @@ export function GuidesSection() {
   const featuredPosts = getFeaturedPosts(6);
 
   return (
-    <section id="blog" className="py-20 lg:py-24 bg-white border-b border-gray-100">
+    <section id="blog" className="py-20 lg:py-24 bg-slate-100/80 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">

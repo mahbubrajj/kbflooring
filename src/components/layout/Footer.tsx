@@ -1,11 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export function Footer() {
+  const [currentYear, setCurrentYear] = useState<number>(2026);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   const scrollTo = (id: string) => {
     const el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -175,7 +181,7 @@ export function Footer() {
           {/* Subfooter */}
           <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] sm:text-[15px] text-gray-400">
             <div>
-              © 2026 KB Flooring BD. All rights reserved. Engineering durable floors across Bangladesh.
+              © {currentYear} KB Flooring BD. All rights reserved.
             </div>
 
             <div className="flex items-center space-x-6 text-gray-300">

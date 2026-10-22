@@ -39,7 +39,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-gray-50/70 border-b border-gray-100">
+    <section className="py-20 lg:py-24 bg-white border-b border-gray-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -61,8 +61,8 @@ export function FaqSection() {
             return (
               <div
                 key={idx}
-                className={`bg-white border transition-colors shadow-xs ${
-                  isOpen ? "border-gray-400" : "border-gray-200/90 hover:border-gray-300"
+                className={`bg-slate-50/80 border transition-colors shadow-xs ${
+                  isOpen ? "border-gray-400 bg-white" : "border-gray-200 hover:border-gray-300"
                 }`}
               >
                 <button

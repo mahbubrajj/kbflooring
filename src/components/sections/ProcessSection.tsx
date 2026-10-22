@@ -36,7 +36,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="py-20 lg:py-24 bg-white border-b border-gray-100">
+    <section className="py-20 lg:py-24 bg-slate-100/80 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -58,7 +58,7 @@ export function ProcessSection() {
             return (
               <div
                 key={idx}
-                className="relative bg-gray-50/70 border border-gray-200/80 p-3.5 sm:p-6 flex flex-col justify-start hover:border-gray-400 transition-colors"
+                className="relative bg-white border border-gray-200 shadow-xs p-3.5 sm:p-6 flex flex-col justify-start hover:border-gray-400 hover:shadow-md transition-all"
               >
                 {/* Step Header with Big Number & Icon */}
                 <div className="flex items-center justify-between mb-2.5 sm:mb-4">

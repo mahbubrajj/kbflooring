@@ -12,7 +12,7 @@ export function StatsSection() {
     {
       value: "180+",
       label: "COMMERCIAL CLIENTS",
-      color: "text-white",
+      color: "text-gray-950",
     },
     {
       value: "1.2M+",
@@ -22,12 +22,12 @@ export function StatsSection() {
     {
       value: "12+",
       label: "YEARS EXPERIENCE",
-      color: "text-white",
+      color: "text-gray-950",
     },
   ];
 
   return (
-    <section className="bg-[#0b1118] text-white py-14 border-t border-b border-gray-800">
+    <section className="bg-white py-14 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 text-center">
           {stats.map((s, idx) => (
@@ -35,7 +35,7 @@ export function StatsSection() {
               <div className={`text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight ${s.color} mb-2`}>
                 {s.value}
               </div>
-              <div className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-gray-400">
+              <div className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-gray-600">
                 {s.label}
               </div>
             </div>

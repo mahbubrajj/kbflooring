@@ -50,7 +50,7 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 lg:py-24 bg-gray-50/70 border-b border-gray-100">
+    <section className="py-20 lg:py-24 bg-slate-100/80 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

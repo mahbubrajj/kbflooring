@@ -16,7 +16,7 @@ export function AboutSection({ onOpenGallery }: AboutSectionProps) {
   };
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-white border-b border-gray-100">
+    <section id="about" className="py-20 lg:py-28 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Section Header Labels */}
         <div className="mb-10">

@@ -43,7 +43,7 @@ export function CoverageSection({ onInquireTravel }: CoverageSectionProps) {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-white border-b border-gray-100">
+    <section className="py-20 lg:py-24 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">

@@ -29,7 +29,7 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 lg:py-24 bg-gray-50/70 border-b border-gray-100">
+    <section className="py-20 lg:py-24 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -49,7 +49,7 @@ export function TestimonialsSection() {
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-white p-7 sm:p-8 border border-gray-200/90 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow"
+              className="bg-slate-50/70 p-7 sm:p-8 border border-gray-200 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow"
             >
               <div>
                 {/* 5 Stars */}

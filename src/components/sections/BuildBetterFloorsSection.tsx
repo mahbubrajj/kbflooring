@@ -46,20 +46,17 @@ export function BuildBetterFloorsSection({ onOpenQuoteModal }: BuildBetterFloors
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gray-900 text-white relative overflow-hidden border-b border-gray-800">
-      {/* Background Accent Gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-950/25 via-gray-900 to-gray-950 pointer-events-none" />
-
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#e11d2a] block mb-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#d32323] block mb-2">
             Why Choose KB Flooring
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black uppercase tracking-tight text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black uppercase tracking-tight text-gray-950 mb-3">
             Why Choose Us?
           </h2>
-          <p className="text-sm sm:text-base text-gray-300 font-medium">
+          <p className="text-sm sm:text-base text-gray-600 font-medium">
             Your Project. Our Expertise. Quality That Lasts.
           </p>
         </div>
@@ -72,19 +69,19 @@ export function BuildBetterFloorsSection({ onOpenQuoteModal }: BuildBetterFloors
             return (
               <div
                 key={idx}
-                className={`bg-gray-800/80 border border-gray-700/80 p-3.5 sm:p-5 rounded-lg flex flex-col justify-between hover:border-[#b8001a] hover:bg-gray-800 transition-all ${
+                className={`bg-slate-50/80 border border-gray-200/90 p-3.5 sm:p-5 rounded-lg flex flex-col justify-between hover:border-[#b8001a] hover:bg-white hover:shadow-md transition-all ${
                   isLast ? "col-span-2 lg:col-span-1" : ""
                 }`}
               >
                 <div>
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-red-950/70 border border-red-800/60 text-[#ff4d5a] flex items-center justify-center mb-3 shrink-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-red-50 border border-red-100 text-[#d32323] flex items-center justify-center mb-3 shrink-0">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug">
+                  <h3 className="text-xs sm:text-sm font-bold text-gray-950 mb-1.5 leading-snug">
                     {pt.title}
                   </h3>
                 </div>
-                <p className="text-[11px] sm:text-xs text-gray-400 mt-2 line-clamp-2 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-gray-600 mt-2 line-clamp-2 leading-relaxed">
                   {pt.desc}
                 </p>
               </div>

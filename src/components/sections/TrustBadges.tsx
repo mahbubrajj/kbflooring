@@ -28,7 +28,7 @@ export function TrustBadges() {
   ];
 
   return (
-    <section className="bg-white py-6 border-b border-gray-100">
+    <section className="bg-slate-100/80 py-7 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {badges.map((b, idx) => {
@@ -36,7 +36,7 @@ export function TrustBadges() {
             return (
               <div
                 key={idx}
-                className="flex items-start space-x-2.5 sm:space-x-3.5 p-3 sm:p-4 bg-gray-50/70 hover:bg-gray-50 border border-gray-100/90 rounded-none transition-colors"
+                className="flex items-start space-x-2.5 sm:space-x-3.5 p-3.5 sm:p-4 bg-white hover:bg-gray-50/80 border border-gray-200 rounded-none shadow-xs transition-colors"
               >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-red-50 text-[#d32323] flex items-center justify-center border border-red-100">
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5" />

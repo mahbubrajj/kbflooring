@@ -45,7 +45,8 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)] transition-all duration-300">
+    <>
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)] transition-all duration-300">
       {/* Header Top Bar (Smoothly slides away on scroll - sleek compact 32px height) */}
       <div
         className={`bg-[#0b1120] text-gray-200 font-medium border-b border-gray-800/80 transition-all duration-300 overflow-hidden ${
@@ -421,5 +422,9 @@ export function Header({ onOpenQuoteModal }: HeaderProps) {
         )}
       </div>
     </header>
+
+    {/* Layout Spacer: Prevents content from being hidden behind fixed header */}
+    <div className="h-[96px] sm:h-[104px] w-full shrink-0 pointer-events-none" aria-hidden="true" />
+  </>
   );
 }

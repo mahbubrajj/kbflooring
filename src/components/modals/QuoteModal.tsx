@@ -41,7 +41,7 @@ export function QuoteModal({ isOpen, onClose, preselectedService }: QuoteModalPr
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs animate-in fade-in duration-200">
       <div className="bg-white text-gray-900 border border-gray-200 max-w-lg w-full relative p-6 sm:p-8 shadow-2xl animate-in zoom-in-95 duration-200">
         <button
           onClick={handleResetAndClose}

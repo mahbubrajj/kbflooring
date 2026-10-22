@@ -229,7 +229,7 @@ export default function ProjectsPage() {
 
         {/* Modal for Project Inspection */}
         {activeProjectModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/85 backdrop-blur-xs animate-in fade-in duration-200">
             <div className="bg-white max-w-2xl w-full text-gray-900 relative shadow-2xl border border-gray-200 max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setActiveProjectModal(null)}

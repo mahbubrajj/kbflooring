@@ -127,7 +127,7 @@ export function ProjectsSection() {
 
       {/* Project Lightbox Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-[#141d27] border border-gray-700 max-w-2xl w-full text-white relative overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200">
             <button
               onClick={() => setActiveProject(null)}

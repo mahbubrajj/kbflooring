@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
-import React, { useState } from "react";
-import { X, CheckCircle2, ArrowRight } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { X, CheckCircle2, ArrowRight, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -21,18 +21,53 @@ export function QuoteModal({ isOpen, onClose, preselectedService }: QuoteModalPr
     location: "",
   });
 
+  const [honeypot, setHoneypot] = useState("");
+  const [formMountTime, setFormMountTime] = useState<number>(0);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    if (isOpen) {
+      setFormMountTime(Date.now());
+      setErrorMessage("");
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          mobileNumber: formData.mobileNumber,
+          service: formData.service,
+          area: formData.area,
+          location: formData.location,
+          source: "Quote Modal",
+          _gotcha: honeypot,
+          _timestamp: formMountTime,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.error || "Failed to submit request. Please call +880 1819-199876.");
+      }
+    } catch {
+      setErrorMessage("Network error occurred. Please call us directly at +880 1819-199876.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleResetAndClose = () => {
@@ -72,6 +107,28 @@ export function QuoteModal({ isOpen, onClose, preselectedService }: QuoteModalPr
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Honeypot field for bot protection */}
+            <div style={{ display: "none" }} aria-hidden="true">
+              <label htmlFor="modal_hp">Leave this field blank</label>
+              <input
+                id="modal_hp"
+                type="text"
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+            </div>
+
+            {/* Error Banner */}
+            {errorMessage && (
+              <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs flex items-center space-x-2">
+                <AlertCircle className="w-4 h-4 text-[#d32323] shrink-0" />
+                <span>{errorMessage}</span>
+              </div>
+            )}
+
             <div>
               <div className="inline-block bg-[#d32323] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 mb-2">
                 Free Site Visit & Laser Measurement

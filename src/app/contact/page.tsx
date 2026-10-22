@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,6 +13,7 @@ import {
   ChevronRight,
   ShieldCheck,
   Building,
+  AlertCircle,
 } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -31,16 +32,44 @@ export default function ContactPage() {
     message: "",
   });
 
+  const [honeypot, setHoneypot] = useState("");
+  const [formMountTime, setFormMountTime] = useState<number>(0);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    setFormMountTime(Date.now());
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          source: "Contact Us Page",
+          _gotcha: honeypot,
+          _timestamp: formMountTime,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.error || "Failed to submit inquiry. Please call +880 1819-199876.");
+      }
+    } catch {
+      setErrorMessage("Network error occurred. Please call us directly at +880 1819-199876.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 800);
+    }
   };
 
   return (
@@ -242,6 +271,28 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-4">
+                      {/* Honeypot field for bot protection (hidden from humans) */}
+                      <div style={{ display: "none" }} aria-hidden="true">
+                        <label htmlFor="website_hp">Leave this field blank</label>
+                        <input
+                          id="website_hp"
+                          type="text"
+                          name="_gotcha"
+                          tabIndex={-1}
+                          autoComplete="off"
+                          value={honeypot}
+                          onChange={(e) => setHoneypot(e.target.value)}
+                        />
+                      </div>
+
+                      {/* Error Banner */}
+                      {errorMessage && (
+                        <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs flex items-center space-x-2">
+                          <AlertCircle className="w-4 h-4 text-[#d32323] shrink-0" />
+                          <span>{errorMessage}</span>
+                        </div>
+                      )}
+
                       <div>
                         <span className="text-[10px] font-bold uppercase tracking-widest text-[#d32323] block mb-1">
                           Direct Engineering Response

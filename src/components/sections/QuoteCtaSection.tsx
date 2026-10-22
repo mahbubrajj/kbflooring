@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
-import React, { useState } from "react";
-import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Send } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Send, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,17 +19,48 @@ export function QuoteCtaSection({ selectedServicePreload }: QuoteCtaSectionProps
     requirements: "",
   });
 
+  const [honeypot, setHoneypot] = useState("");
+  const [formMountTime, setFormMountTime] = useState<number>(0);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    setFormMountTime(Date.now());
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage("");
 
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          mobileNumber: formData.mobileNumber,
+          service: formData.service,
+          estimatedArea: formData.estimatedArea,
+          requirements: formData.requirements,
+          source: "Homepage Quote CTA",
+          _gotcha: honeypot,
+          _timestamp: formMountTime,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.error || "Failed to submit request. Please call +880 1819-199876.");
+      }
+    } catch {
+      setErrorMessage("Network error occurred. Please call us directly at +880 1819-199876.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 800);
+    }
   };
 
   return (
@@ -115,6 +146,28 @@ export function QuoteCtaSection({ selectedServicePreload }: QuoteCtaSectionProps
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Honeypot field for bot protection */}
+                  <div style={{ display: "none" }} aria-hidden="true">
+                    <label htmlFor="quote_cta_hp">Leave this field blank</label>
+                    <input
+                      id="quote_cta_hp"
+                      type="text"
+                      name="_gotcha"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                    />
+                  </div>
+
+                  {/* Error Banner */}
+                  {errorMessage && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs flex items-center space-x-2">
+                      <AlertCircle className="w-4 h-4 text-[#d32323] shrink-0" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
                   <div>
                     <h3 className="text-base font-extrabold uppercase tracking-wide text-gray-950 mb-1">
                       Request Technical Proposal
